@@ -1,8 +1,9 @@
-define([
-  'text!resources/templates/settingsLinkedIn.html',
-], function (TemplateSettingsLinkedIn) {
+//define([
+//  'text!resources/templates/settingsLinkedIn.html',
+//], function (TemplateSettingsLinkedIn) {
 
   var SettingsLinkedIn = Backbone.View.extend({
+    template: '<%= erb(:"settingsLinkedIn.html").gsub(/([^>\r\n]?)(\r\n|\n\r|\r|\n)/," ") %>',
     className: "linkedInSettingsMenu",
 
     initialize: function () {
@@ -18,6 +19,6 @@ define([
     }
   });
 
-  return SettingsLinkedIn;
-
-});
+//  return SettingsLinkedIn;
+//
+//});
