@@ -1,6 +1,3 @@
-//define([
-//  'text!resources/templates/settingsLinkedIn.html',
-//], function (TemplateSettingsLinkedIn) {
 
   var SettingsLinkedIn = Backbone.View.extend({
     template: '<%= erb(:"settingsLinkedIn.html").gsub(/([^>\r\n]?)(\r\n|\n\r|\r|\n)/," ") %>',
@@ -13,12 +10,9 @@
 
     render: function () {
       var body;
-      body = _.template(TemplateSettingsLinkedIn, {
+      body = _.template(this.template, {
       });
       this.$el.html(body);
     }
   });
 
-//  return SettingsLinkedIn;
-//
-//});
