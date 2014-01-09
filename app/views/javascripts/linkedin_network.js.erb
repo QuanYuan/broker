@@ -1,0 +1,23 @@
+define([
+  'text!resources/templates/settingsLinkedIn.html',
+], function (TemplateSettingsLinkedIn) {
+
+  var SettingsLinkedIn = Backbone.View.extend({
+    className: "linkedInSettingsMenu",
+
+    initialize: function () {
+      _.bindAll(this);
+      this.render();
+    },
+
+    render: function () {
+      var body;
+      body = _.template(TemplateSettingsLinkedIn, {
+      });
+      this.$el.html(body);
+    }
+  });
+
+  return SettingsLinkedIn;
+
+});
